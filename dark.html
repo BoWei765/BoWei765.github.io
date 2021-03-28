@@ -13,13 +13,28 @@
     </div>
     
     <div class="ui vertical inverted segment">
-        <textarea cols=80 rols=100 font=20px style="height: 300px;" placeholder="请在此处输入词语......"></textarea>
+        <textarea id="maintext" cols=80 rols=100 font=20px style="height: 300px;" placeholder="请在此处输入词语......"></textarea>
     </div>
+    <script>
+        function change(){
+            window.location.href = "http://bowei765.github.io/light.html";
+        }
+        function help(){
+            alert("网页版预习神器对所有人开放！\n联系开发者:+86 19801379165");
+        }
+        function upword(){
+            var string=document.getElementById("maintext");
+            window.open("http://preview.free.vipnps.vip/web/word/"+string.value);
+        }
+        function Setclear(){
+            $("#maintext").val(' ');
+        }
+    </script>
     <div class="ui vertical inverted segment">
-        <button class="ui vertical white inverted button">提交</button>
-        <button class="ui vertical white inverted button">清空</button>
-        <button class="ui vertical white inverted button">主题切换</button>
-        <button class="ui vertical white inverted button">帮助</button>
+        <button class="ui vertical white inverted button",type="button" onclick="upword()">提交</button>
+        <button class="ui vertical white inverted button",type="button" onclick="Setclear()">清空</button>
+        <button class="ui vertical white inverted button",type="button" onclick="change()">主题切换</button>
+        <button class="ui vertical white inverted button",type="button" onclick="help()">帮助</button>
     </div>
     <div class="ui vertical inverted segment">
         <p1>用法：<br></br></p1>
@@ -33,3 +48,4 @@
     最新更新：Api内核八代，Windows版客户端五代，微信版三代<br></br>
 </div>
 </body>
+</html>
