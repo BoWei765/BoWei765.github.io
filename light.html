@@ -9,16 +9,31 @@
 <body style="background-color:skyblue;text-align: center">
     <div class="ui vertical inverted sky blue segment">
         <h1> <font color = 'white'>预 习 神 器 网 页 版</font></h1>
-        <a href="#"><font color="blue">下载最新版Windows客户端，体验更多功能</font></a>
+        <a href="http://bowei765.github.io/0.0.5windws.rar"><font color="blue">下载最新版Windows客户端，体验更多功能</font></a>
     </div>
     <div class="ui vertical inverted sky blue segment">
-        <textarea cols=80 rols=100 font=20px style="height: 300px;" placeholder="请在此处输入词语......"></textarea>
+        <textarea id="maintext" cols=80 rols=100 font=20px style="height: 300px;" placeholder="请在此处输入词语，词语和词语之间以中文都逗号隔开......"></textarea>
     </div>
+    <script>
+        function change(){
+            window.location.href = "http://bowei765.github.io/dark.html";
+        }
+        function help(){
+            alert("网页版预习神器对所有人开放！\n联系开发者:+86 19801379165");
+        }
+        function upword(){
+            var string=document.getElementById("maintext");
+            window.open("http://preview.free.vipnps.vip/web/word/"+string.value);
+        }
+        function Setclear(){
+            $("#maintext").val(' ');
+        }
+    </script>
     <div class="ui vertical inverted  sky blue segment">
-        <button class="ui vertical white button">提交</button>
-        <button class="ui vertical white button">清空</button>
-        <button class="ui vertical white button">主题切换</button>
-        <button class="ui vertical white button">帮助</button>
+        <button class="ui vertical white button",type="button" onclick="upword()">提交</button>
+        <button class="ui vertical white button",type="button" onclick="Setclear()">清空</button>
+        <button class="ui vertical white button",type="button" onclick="change()">主题切换</button>
+        <button class="ui vertical white button",type="button" onclick="help()">帮助</button>
     </div>
     <div class="ui vertical inverted sky blue segment">
         <p1>用法：<br></br></p1>
